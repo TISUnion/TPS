@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 
 from time import sleep
+import sys
 
 def onServerInfo(server, info):
   if info.isPlayer == 1:
     if info.content.startswith('!!tps'):
       args = info.content.split(' ')
-      if len(args) == 1:
+      if args[0] != 'tps':
+        sys.exit(0)
+      elif (len(args) == 1):
         server.execute('debug start')
         sleep(1)
         server.execute('debug stop')
