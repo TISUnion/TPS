@@ -6,7 +6,7 @@ def onServerInfo(server, info):
   if info.isPlayer == 1:
     if info.content.startswith('!!tps'):
       args = info.content.split(' ')
-      if args[0] == 'tps':
+      if args[0] == '!!tps':
         if (len(args) == 1):
           server.execute('debug start')
           sleep(1)
