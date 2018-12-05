@@ -18,7 +18,7 @@ def onServerInfo(server, info):
           sleep(float(args[1]))
           server.execute('debug stop')
         elif (len(args) == 2) and (args[1].isdigit()) and (float(args[1]) < 1.0 ):
-        server.say(info.player + '甘霖娘!')
+          server.say(info.player + '甘霖娘!')
         elif (len(args) == 2) and (args[1].isdigit()) and (float(args[1]) > 60 ):
           server.say(info.player+'滚出克!')
         else:
